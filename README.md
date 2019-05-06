@@ -3,9 +3,10 @@ Azure App Service Custom Container samples/boilerplates with different languages
 
 **Currently:**
 
--Basic Node image with Express
+* Basic Node image with Express
+* Basic Ruby image with Rails
+* Node image with a cronjob
 
--Basic Ruby image with Rails
 
 ## To deploy an image to App Service
 * Build the image with `docker build -t <your_container_registry>/<image_name> .` (notice the **.** at the end)
