@@ -1,17 +1,19 @@
 
 FROM ruby:2.6
 
+LABEL maintainer="Saleh Albuga a-saalbu@microsoft.com"
+
 # ssh
 ENV SSH_PASSWD "root:Docker!"
 RUN apt-get update \
         && apt-get install -y --no-install-recommends dialog \
         && apt-get update \
-	&& apt-get install -y --no-install-recommends openssh-server \
-	&& echo "$SSH_PASSWD" | chpasswd 
+        && apt-get install -y --no-install-recommends openssh-server \
+        && echo "$SSH_PASSWD" | chpasswd 
 
 COPY sshd_config /etc/ssh/
 COPY init.sh /usr/local/bin/
-	
+
 RUN chmod u+x /usr/local/bin/init.sh
 
 RUN mkdir /code
