@@ -1,4 +1,4 @@
-# Node image 
+# Nginx Static Site image 
 This demo contains a static site served by Nginx
 * Based on Alpine 
 

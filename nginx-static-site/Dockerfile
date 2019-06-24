@@ -20,4 +20,4 @@ COPY index.html /usr/share/nginx/html/index.html
 
 EXPOSE 80 2222
 
-RUN  sh /usr/local/bin/init.sh
+ENTRYPOINT ["init.sh"]
