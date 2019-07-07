@@ -4,4 +4,4 @@
 echo "Starting SSH ..."
 service ssh start
 
-nginx -g 'daemon off;' 
+node server.js
