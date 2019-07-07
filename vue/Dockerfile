@@ -16,7 +16,7 @@ COPY init.sh /usr/local/bin/
 
 RUN chmod u+x /usr/local/bin/init.sh
 
-# make a temp directory to build the anuglar project
+# build the project in a temp directory
 RUN mkdir /site
 ADD /vueapp /build
 WORKDIR /build
@@ -25,7 +25,6 @@ RUN npm run build
 
 # move the output to another folder and clean
 WORKDIR /site
-#RUN mkdir /public
 RUN cp -r ../build/dist /public
 RUN rm -r ../build
 ADD server.js .

@@ -16,16 +16,16 @@ COPY init.sh /usr/local/bin/
 
 RUN chmod u+x /usr/local/bin/init.sh
 
-# make a temp directory to build the anuglar project
+# make a temp directory to build the project
 RUN mkdir /site
-ADD /app /build
+ADD /reactapp /build
 WORKDIR /build
 RUN npm install
 RUN npm run build
 
 # move the output to another folder and clean
 WORKDIR /site
-RUN cp -r ../build/dist/angular /public
+RUN cp -r ../build/build /public
 RUN rm -r ../build
 ADD server.js .
 ADD package.json .
