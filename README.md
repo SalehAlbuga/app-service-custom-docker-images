@@ -3,9 +3,10 @@ Azure App Service Custom Container samples/boilerplates with different languages
 
 **Currently:**
 
+* Node image with a cronjob
+* Node image with a custom locale
 * Basic Node image with Express
 * Basic Ruby image with Rails
-* Node image with a cronjob
 * Python image image with Flask & Gunicorn
 * VueJs App image
 * React App image
