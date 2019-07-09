@@ -1,5 +1,5 @@
-# Azure App Service Custom Containers
-Azure App Service Custom Container samples/boilerplates with different languages &amp; setups including the basic App Service setup (SSH and ports)
+# Azure App Service custom Docker images
+Azure App Service custom Docker image samples/boilerplates with different languages &amp; setups including the basic App Service setup (SSH and ports)
 
 **Currently:**
 
