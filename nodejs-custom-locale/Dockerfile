@@ -1,8 +1,6 @@
 
 FROM node:10.15
 
-LABEL maintainer="Saleh Albuga a-saalbu@microsoft.com"
-
 RUN mkdir /code
 WORKDIR /code
 ADD . /code/
@@ -15,6 +13,9 @@ RUN apt-get update \
         && apt-get update \
         && apt-get install -y --no-install-recommends openssh-server \
         && echo "$SSH_PASSWD" | chpasswd 
+
+# Install your custom dependencies
+#RUN apt-get install -y --no-install-recommends <packages>
 
 # install locales
 RUN apt-get install locales -y --no-install-recommends dialog

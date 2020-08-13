@@ -1,5 +1,5 @@
-# React App image 
-This demo contains an React app that's built for production in the image and served using Express
+# Ruby image 
+This demo contains an Ruby on Rails apps.
 
 ## To deploy it to App Service
 * Build the image with `docker build -t <your_container_registry>/<image_name> .` (notice the **.** at the end)

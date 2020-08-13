@@ -1,8 +1,6 @@
 
 FROM node:10.15
 
-LABEL maintainer="Saleh Albuga a-saalbu@microsoft.com"
-
 # ssh
 ENV SSH_PASSWD "root:Docker!"
 RUN apt-get update \

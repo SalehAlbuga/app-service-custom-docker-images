@@ -1,6 +1,4 @@
-FROM python:3.4
-
-LABEL maintainer="Saleh Albuga a-saalbu@microsoft.com"
+FROM python:3.8
 
 RUN mkdir /code
 WORKDIR /code
@@ -15,6 +13,9 @@ RUN apt-get update \
         && apt-get update \
         && apt-get install -y --no-install-recommends openssh-server \
         && echo "$SSH_PASSWD" | chpasswd 
+
+# Install your custom dependencies
+#RUN apt-get install -y --no-install-recommends <packages>
 
 COPY sshd_config /etc/ssh/
 COPY init.sh /usr/local/bin/
